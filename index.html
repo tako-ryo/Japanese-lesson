@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en" id="html-root">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Japanese with Ryosuke | Learn Real Japanese with a Certified Tutor</title>
+<meta name="description" content="Learn real, practical Japanese with Ryosuke — a Preply Certified Tutor with 4 years of global business experience. Free original app for students, English-friendly lessons for absolute beginners to business professionals.">
+<meta property="og:title" content="Japanese with Ryosuke | Learn Real Japanese with a Certified Tutor">
+<meta property="og:description" content="English-friendly Japanese lessons + a free original study app, exclusively for my students.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1B2A4A;
+    --navy-light:#26386A;
+    --coral:#FF6B4A;
+    --coral-dark:#E8563A;
+    --cream:#FFF8F3;
+    --white:#FFFFFF;
+    --gray-text:#5A6478;
+    --border:#E7E7EE;
+    --shadow: 0 10px 30px rgba(27,42,74,0.08);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans JP','Poppins',sans-serif;
+    color:var(--navy);
+    background:var(--white);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{
+    font-family:'Poppins','Noto Sans JP',sans-serif;
+    font-weight:700;
+    line-height:1.3;
+  }
+  a{text-decoration:none; color:inherit;}
+  img{max-width:100%; display:block;}
+  ul{list-style:none;}
+  .ja{display:none;}
+  body.lang-ja .en{display:none;}
+  body.lang-ja .ja{display:inline;}
+
+  .container{max-width:1140px; margin:0 auto; padding:0 24px;}
+  section{padding:88px 0;}
+  .section-tag{
+    display:inline-block; color:var(--coral); font-weight:700; letter-spacing:1px;
+    text-transform:uppercase; font-size:13px; margin-bottom:12px;
+  }
+  .section-title{font-size:clamp(28px,4vw,40px); margin-bottom:16px;}
+  .section-sub{color:var(--gray-text); font-size:17px; max-width:640px; margin-bottom:48px;}
+  .center{text-align:center; margin-left:auto; margin-right:auto;}
+
+  .btn{
+    display:inline-block; padding:16px 34px; border-radius:50px; font-weight:700;
+    font-size:16px; cursor:pointer; border:2px solid transparent; transition:.2s ease;
+  }
+  .btn-primary{background:var(--coral); color:#fff;}
+  .btn-primary:hover{background:var(--coral-dark); transform:translateY(-2px);}
+  .btn-outline{border-color:var(--white); color:var(--white);}
+  .btn-outline:hover{background:rgba(255,255,255,0.12);}
+  .btn-outline-navy{border-color:var(--navy); color:var(--navy);}
+  .btn-outline-navy:hover{background:var(--navy); color:#fff;}
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:100; background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px); border-bottom:1px solid var(--border);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:1140px; margin:0 auto; padding:16px 24px;
+  }
+  .logo{font-size:20px; font-weight:800; color:var(--navy);}
+  .logo span{color:var(--coral);}
+  .nav-links{display:flex; align-items:center; gap:32px;}
+  .nav-links a{font-weight:600; font-size:15px; color:var(--navy);}
+  .nav-links a:hover{color:var(--coral);}
+  .lang-toggle{
+    border:2px solid var(--navy); border-radius:50px; padding:6px 6px; display:flex;
+    font-size:13px; font-weight:700; cursor:pointer; user-select:none; background:none;
+  }
+  .lang-toggle span{padding:5px 12px; border-radius:50px; color:var(--navy);}
+  .lang-toggle .active{background:var(--navy); color:#fff;}
+  .nav-cta{margin-left:8px;}
+  .nav-cta .btn{padding:10px 22px; font-size:14px;}
+  .burger{display:none; font-size:26px; background:none; border:none; cursor:pointer; color:var(--navy);}
+
+  @media (max-width:900px){
+    .nav-links{
+      position:absolute; top:100%; left:0; right:0; background:#fff; flex-direction:column;
+      padding:24px; gap:20px; border-bottom:1px solid var(--border); display:none;
+    }
+    .nav-links.open{display:flex;}
+    .burger{display:block;}
+  }
+
+  /* HERO */
+  .hero{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+    color:#fff; padding:80px 0 100px;
+  }
+  .hero .container{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center;
+  }
+  .hero-eyebrow{
+    display:inline-block; background:rgba(255,255,255,0.12); padding:8px 16px;
+    border-radius:50px; font-size:13px; font-weight:700; margin-bottom:20px; letter-spacing:.5px;
+  }
+  .hero h1{font-size:clamp(32px,4.4vw,48px); margin-bottom:20px;}
+  .hero h1 .en, .hero h1 .ja{color:#fff;}
+  .hero p.lead{font-size:18px; color:#D9DFEE; margin-bottom:32px; max-width:520px;}
+  .hero-badges{display:flex; gap:24px; margin-top:36px; flex-wrap:wrap;}
+  .hero-badge{display:flex; align-items:center; gap:10px; font-size:14px; color:#D9DFEE; font-weight:600;}
+  .hero-badge .dot{width:8px; height:8px; border-radius:50%; background:var(--coral);}
+  .hero-photo-wrap{position:relative; display:flex; justify-content:center;}
+  .hero-photo-frame{
+    width:320px; height:320px; border-radius:50%; overflow:hidden; border:6px solid rgba(255,255,255,0.15);
+    box-shadow:var(--shadow); background:#33456f;
+  }
+  .hero-photo-frame img{width:100%; height:100%; object-fit:cover;}
+  .hero-photo-tag{
+    position:absolute; bottom:6px; right:calc(50% - 160px + 14px); background:var(--coral);
+    color:#fff; padding:10px 18px; border-radius:50px; font-size:13px; font-weight:700; box-shadow:var(--shadow);
+  }
+
+  /* APP DEMO */
+  .app-demo{background:var(--cream);}
+  .app-demo .container{display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px; align-items:center;}
+  .phone-mock{
+    width:260px; height:530px; margin:0 auto; background:var(--navy); border-radius:40px;
+    padding:14px; box-shadow:var(--shadow); position:relative;
+  }
+  .phone-mock .screen{
+    width:100%; height:100%; border-radius:28px; background:linear-gradient(160deg,#fff 0%,#FFEDE7 100%);
+    display:flex; align-items:center; justify-content:center; overflow:hidden; position:relative;
+  }
+  .phone-mock .screen img, .phone-mock .screen video{
+    width:100%; height:100%; object-fit:cover;
+  }
+  .phone-mock .placeholder-text{
+    text-align:center; padding:24px; color:var(--navy); font-size:14px; font-weight:600; line-height:1.6;
+  }
+  .phone-mock .notch{
+    position:absolute; top:14px; left:50%; transform:translateX(-50%); width:90px; height:18px;
+    background:var(--navy); border-radius:0 0 14px 14px; z-index:2;
+  }
+  .app-feature-list{margin-top:28px;}
+  .app-feature-list li{
+    display:flex; gap:12px; margin-bottom:16px; font-size:15px; color:var(--navy); font-weight:500;
+  }
+  .app-feature-list li .icon{
+    flex:0 0 auto; width:28px; height:28px; border-radius:8px; background:var(--coral);
+    color:#fff; display:flex; align-items:center; justify-content:center; font-size:14px; font-weight:800;
+  }
+  .free-tag{
+    display:inline-block; background:var(--navy); color:#fff; padding:8px 18px; border-radius:50px;
+    font-weight:700; font-size:13px; margin-bottom:18px;
+  }
+
+  /* STRENGTHS */
+  .strengths-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .strength-card{
+    background:#fff; border:1px solid var(--border); border-radius:18px; padding:32px 26px;
+    box-shadow:var(--shadow); transition:.2s ease;
+  }
+  .strength-card:hover{transform:translateY(-4px);}
+  .strength-num{
+    width:42px; height:42px; border-radius:12px; background:var(--cream); color:var(--coral);
+    display:flex; align-items:center; justify-content:center; font-weight:800; font-size:17px; margin-bottom:18px;
+  }
+  .strength-card h3{font-size:18px; margin-bottom:10px;}
+  .strength-card p{color:var(--gray-text); font-size:14.5px;}
+
+  @media (max-width:900px){
+    .strengths-grid{grid-template-columns:1fr;}
+  }
+
+  /* IS THIS YOU */
+  .fit-list{display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:12px; list-style:none;}
+  .fit-list li{background:#fff; border-radius:14px; padding:20px 22px; box-shadow:var(--shadow); font-size:14.5px; color:var(--navy); font-weight:500;}
+  @media (max-width:600px){ .fit-list{grid-template-columns:1fr;} }
+
+  /* EXAMPLE PLAN */
+  .ba-box{display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-bottom:40px;}
+  .ba-col{background:#fff; border:1px solid var(--border); border-radius:16px; padding:24px; box-shadow:var(--shadow);}
+  .ba-tag{display:inline-block; font-size:12px; font-weight:800; padding:5px 14px; border-radius:50px; margin-bottom:12px;}
+  .ba-tag.before{background:#F1F1F5; color:var(--gray-text);}
+  .ba-tag.after{background:var(--coral); color:#fff;}
+  .ba-col p{font-size:14px; color:var(--navy); line-height:1.6;}
+  @media (max-width:700px){ .ba-box{grid-template-columns:1fr;} }
+  .plan-timeline{display:flex; flex-direction:column; gap:14px;}
+  .plan-day{
+    display:flex; align-items:flex-start; gap:16px; background:#fff; border:1px solid var(--border);
+    border-radius:14px; padding:16px 20px; font-size:14px; color:var(--navy); box-shadow:var(--shadow);
+  }
+  .plan-day .day-num{
+    flex:0 0 auto; width:32px; height:32px; border-radius:50%; background:var(--navy); color:#fff;
+    font-weight:800; font-size:13px; display:flex; align-items:center; justify-content:center;
+  }
+
+  /* COMPARISON TABLE */
+  .compare-wrap{overflow-x:auto; border-radius:18px; box-shadow:var(--shadow); border:1px solid var(--border);}
+  table.compare{width:100%; border-collapse:collapse; min-width:760px; background:#fff; table-layout:fixed;}
+  table.compare th, table.compare td{
+    padding:20px 22px; text-align:left; border-bottom:1px solid var(--border); font-size:14.5px; vertical-align:top;
+  }
+  table.compare thead th{
+    background:var(--navy); color:#fff; font-family:'Poppins','Noto Sans JP',sans-serif; font-size:14px;
+  }
+  table.compare thead th:first-child{border-top-left-radius:18px;}
+  table.compare thead th:last-child{border-top-right-radius:18px;}
+  table.compare tbody tr:last-child td{border-bottom:none;}
+  table.compare td:first-child{font-weight:700; color:var(--navy); background:var(--cream);}
+  table.compare .highlight-col{background:#FFF3EE; font-weight:600; color:var(--navy);}
+  table.compare thead th.highlight-head{background:var(--coral);}
+
+  /* PRICING */
+  .pricing-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+  .price-card{
+    background:#fff; border:1px solid var(--border); border-radius:20px; padding:34px 26px;
+    box-shadow:var(--shadow); display:flex; flex-direction:column;
+  }
+  .price-card.active{border:2px solid var(--coral); position:relative;}
+  .price-card.soon{opacity:0.65;}
+  .price-badge{
+    position:absolute; top:-14px; left:26px; background:var(--coral); color:#fff; font-size:12px;
+    font-weight:700; padding:6px 14px; border-radius:50px;
+  }
+  .price-card h3{font-size:17px; margin-bottom:8px;}
+  .price-amount{font-size:32px; font-weight:800; margin:14px 0; color:var(--navy);}
+  .price-amount span{font-size:14px; font-weight:500; color:var(--gray-text);}
+  .price-card ul{margin:18px 0; flex:1;}
+  .price-card ul li{
+    font-size:13.5px; color:var(--gray-text); margin-bottom:10px; padding-left:20px; position:relative;
+  }
+  .price-card ul li:before{content:"✓"; position:absolute; left:0; color:var(--coral); font-weight:800;}
+  .price-card .btn{width:100%; text-align:center; margin-top:auto;}
+  .soon-tag{
+    display:inline-block; background:var(--navy); color:#fff; font-size:11px; font-weight:700;
+    padding:5px 12px; border-radius:50px; margin-bottom:12px;
+  }
+  .price-note{
+    font-size:12px; color:var(--gray-text); margin-top:10px; line-height:1.5;
+  }
+
+  /* ORIGINAL CONTENT */
+  .content-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:26px;}
+  .content-card{
+    background:#fff; border:1px solid var(--border); border-radius:18px; padding:34px 28px;
+    box-shadow:var(--shadow); text-align:center;
+  }
+  .content-card.soon{opacity:0.6; border-style:dashed; box-shadow:none;}
+  .content-icon{
+    width:56px; height:56px; border-radius:16px; background:var(--navy); color:#fff; font-weight:800;
+    font-size:22px; display:flex; align-items:center; justify-content:center; margin:0 auto 18px;
+  }
+  .content-card h3{font-size:17px; margin-bottom:10px;}
+  .content-card p{color:var(--gray-text); font-size:14px; margin-bottom:20px;}
+
+  @media (max-width:1000px){
+    .pricing-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:600px){
+    .pricing-grid{grid-template-columns:1fr;}
+  }
+
+  /* TESTIMONIALS */
+  .testimonials{background:var(--cream);}
+  .testi-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:26px;}
+  .testi-card{background:#fff; border-radius:18px; padding:28px; box-shadow:var(--shadow);}
+  .testi-stars{color:var(--coral); font-size:15px; margin-bottom:14px;}
+  .testi-card p.quote{font-size:14.5px; color:var(--navy); font-style:italic; margin-bottom:16px;}
+  .testi-name{font-weight:700; font-size:14px;}
+  .testi-loc{font-size:12.5px; color:var(--gray-text);}
+  @media (max-width:900px){ .testi-grid{grid-template-columns:1fr;} }
+
+  /* FAQ */
+  .faq-item{border-bottom:1px solid var(--border); padding:22px 0;}
+  .faq-item summary{
+    font-weight:700; font-size:16px; cursor:pointer; list-style:none; display:flex;
+    justify-content:space-between; align-items:center; color:var(--navy);
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary:after{content:"+"; font-size:22px; color:var(--coral); font-weight:400;}
+  .faq-item[open] summary:after{content:"–";}
+  .faq-item p{margin-top:14px; color:var(--gray-text); font-size:14.5px;}
+  .faq-item ol{margin-top:10px; padding-left:20px; color:var(--gray-text); font-size:14.5px;}
+
+  /* CONTACT */
+  .contact{
+    background:linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%); color:#fff; text-align:center;
+  }
+  .contact .section-title{color:#fff;}
+  .contact p.lead{color:#D9DFEE; max-width:520px; margin:0 auto 36px;}
+  .contact-actions{display:flex; gap:16px; justify-content:center; flex-wrap:wrap;}
+
+  /* FOOTER */
+  footer{background:#12203D; color:#B9C2D9; padding:48px 0 28px;}
+  footer .container{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;}
+  .footer-social a{margin-left:18px; color:#B9C2D9; font-weight:600; font-size:14px;}
+  .footer-social a:hover{color:#fff;}
+  .footer-bottom{
+    text-align:center; font-size:12.5px; margin-top:28px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#top" class="logo">Japanese <span>with Ryosuke</span></a>
+    <button class="burger" id="burgerBtn">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about"><span class="en">About</span><span class="ja">自己紹介</span></a>
+      <a href="#content"><span class="en">My Content</span><span class="ja">オリジナルコンテンツ</span></a>
+      <a href="#why-me"><span class="en">Why Me</span><span class="ja">選ばれる理由</span></a>
+      <a href="#pricing"><span class="en">Pricing</span><span class="ja">料金</span></a>
+      <a href="#faq"><span class="en">FAQ</span><span class="ja">よくある質問</span></a>
+      <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+        <span class="opt-en active">EN</span><span class="opt-ja">日本語</span>
+      </button>
+      <div class="nav-cta">
+        <a href="https://calendly.com/all19-ryo/30min" target="_blank" class="btn btn-primary"><span class="en">Free Trial</span><span class="ja">無料体験</span></a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="container">
+    <div>
+      <span class="hero-eyebrow">
+        <span class="en">✓ Preply Certified Tutor</span>
+        <span class="ja">✓ Preply認定プロ講師</span>
+      </span>
+      <h1>
+        <span class="en">Learn Real Japanese — Taught Clearly in English</span>
+        <span class="ja">本物の日本語を、わかりやすい英語指導で。</span>
+      </h1>
+      <p class="lead">
+        <span class="en">Clear, advanced (C1) English explanations, 4 years of real global business experience, and a free original study app — for absolute beginners to working professionals.</span>
+        <span class="ja">ビジネス英語レベルでの丁寧な解説、4年間のグローバル営業経験、そして無料のオリジナル学習アプリ。完全初心者からビジネスパーソンまで対応します。</span>
+      </p>
+      <div class="hero-actions">
+        <a href="https://calendly.com/all19-ryo/30min" target="_blank" class="btn btn-primary">
+          <span class="en">Book a Free Trial Lesson</span>
+          <span class="ja">無料体験レッスンを予約する</span>
+        </a>
+      </div>
+      <div class="hero-badges">
+        <div class="hero-badge"><span class="dot"></span><span class="en">Certified Preply Tutor</span><span class="ja">Preply認定講師</span></div>
+        <div class="hero-badge"><span class="dot"></span><span class="en">4 yrs Global Business Exp.</span><span class="ja">海外営業4年の実務経験</span></div>
+        <div class="hero-badge"><span class="dot"></span><span class="en">Free Original App</span><span class="ja">無料オリジナルアプリ</span></div>
+      </div>
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <img src="profile.jpg" alt="Ryosuke, Japanese tutor" onerror="this.parentElement.style.display='flex'; this.parentElement.style.alignItems='center'; this.parentElement.style.justifyContent='center'; this.style.display='none'; this.parentElement.innerHTML+='<span style=\'color:#D9DFEE;font-size:13px;text-align:center;padding:20px;\'>Save your photo as<br><b>profile.jpg</b><br>next to this file</span>';">
+      </div>
+      <div class="hero-photo-tag">
+        <span class="en">Hi, I'm Ryosuke 👋</span>
+        <span class="ja">こんにちは、Ryosukeです👋</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT BIO -->
+<section id="about">
+  <div class="container" style="max-width:900px;">
+    <span class="section-tag center" style="display:block;">
+      <span class="en">About Ryosuke</span><span class="ja">自己紹介</span>
+    </span>
+    <h2 class="section-title center">
+      <span class="en">Precision Meets Clarity</span>
+      <span class="ja">正確さと分かりやすさを、あなたに</span>
+    </h2>
+    <p class="section-sub center" style="max-width:760px;">
+      <span class="en">My lessons are built on two things: the precision I learned managing global accounts at a top-tier Japanese corporation, and the clarity I've developed helping language learners here in Vancouver. Because I've worked in fast-paced corporate settings, I know how to navigate Japanese communication at every level — and I'll teach you the natural, real-world Japanese that textbooks usually leave out. From hosting local language exchanges in Vancouver, I've also seen exactly where English speakers tend to get stuck, so I know how to break down complex grammar into simple, easy-to-understand English.</span>
+      <span class="ja">私のレッスンは、大手企業のグローバルビジネスで培った「正確さ」と、ここバンクーバーで多くの学習者をサポートする中で磨いた「分かりやすさ」の2つを軸にしています。最前線のビジネス現場を経験してきたからこそ、日常会話からビジネスの交渉まで、あらゆるレベルの日本語コミュニケーションに対応できます。教科書には載っていない、リアルで自然な日本語をお伝えします。また、バンクーバーでの言語交換イベントの主催を通じて、英語ネイティブの学習者がどこでつまずきやすいかを把握してきました。難しい文法も、シンプルな英語で分かりやすく解説します。</span>
+    </p>
+    <div class="hero-badges" style="justify-content:center; margin-bottom:40px;">
+      <div class="hero-badge" style="color:var(--gray-text);"><span class="dot"></span><span class="en">Based in Vancouver, Canada 🇨🇦</span><span class="ja">カナダ・バンクーバー在住🇨🇦</span></div>
+      <div class="hero-badge" style="color:var(--gray-text);"><span class="dot"></span><span class="en">English Level: C1 (Advanced)</span><span class="ja">英語レベル：C1（上級者）</span></div>
+      <div class="hero-badge" style="color:var(--gray-text);"><span class="dot"></span><span class="en">Tennis, Badminton, Live Music &amp; Ramen 🍜</span><span class="ja">趣味はテニス・バドミントン・ライブ鑑賞・ラーメン巡り🍜</span></div>
+    </div>
+    <div class="content-grid">
+      <div class="strength-card">
+        <h3><span class="en">Teaching at Language Exchanges</span><span class="ja">言語交換イベントでの指導</span></h3>
+        <p><span class="en">Through regular events in Vancouver, I've honed my ability to explain complex Japanese grammar and cultural nuances clearly in English.</span><span class="ja">バンクーバーでの定期的なイベントを通じ、日本語の複雑な文法やニュアンスを英語で分かりやすく解説するスキルを磨きました。</span></p>
+      </div>
+      <div class="strength-card">
+        <h3><span class="en">Business Mentorship</span><span class="ja">ビジネス現場での教育</span></h3>
+        <p><span class="en">Extensive experience coaching business partners and colleagues on formal Japanese writing and etiquette.</span><span class="ja">海外営業にて、現地の同僚やパートナーへビジネス文書や敬語の指導を行い、実用的な日本語教育を実践してきました。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- APP DEMO -->
+<section class="app-demo" id="app">
+  <div class="container">
+    <div class="phone-mock">
+      <div class="notch"></div>
+      <div class="screen">
+        <!-- Actual app demo video (trimmed, muted, autoplay loop) -->
+        <video autoplay muted loop playsinline onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <source src="app-demo.mp4" type="video/mp4">
+        </video>
+        <div class="placeholder-text" style="display:none; flex-direction:column; align-items:center; justify-content:center; height:100%;">
+          📱<br>
+          <span class="en">Place a file named<br><b>app-demo.mp4</b><br>next to this HTML file</span>
+          <span class="ja">このHTMLと同じ場所に<br><b>app-demo.mp4</b><br>という名前で<br>アプリのデモを置いてください</span>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span class="free-tag">
+        <span class="en">100% FREE for my students</span>
+        <span class="ja">生徒限定 完全無料</span>
+      </span>
+      <h2 class="section-title">
+        <span class="en">Practice Anytime with My Original App</span>
+        <span class="ja">無料のオリジナルアプリで、いつでも復習</span>
+      </h2>
+      <p class="section-sub" style="margin-bottom:8px;">
+        <span class="en">A self-made web app — normally sold separately — given free to my students. Review vocabulary, grammar, and take fun quizzes straight from your phone browser, no download needed.</span>
+        <span class="ja">通常は販売しているクオリティの自作Webアプリを、生徒限定で無料開放。スマホのブラウザだけで、単語・文法の復習やクイズがいつでもできます。ダウンロード不要。</span>
+      </p>
+      <ul class="app-feature-list">
+        <li><span class="icon">✓</span><span><span class="en">Works on any smartphone browser</span><span class="ja">スマホのブラウザですぐ使える</span></span></li>
+        <li><span class="icon">✓</span><span><span class="en">Vocabulary & grammar quizzes between lessons</span><span class="ja">レッスンの合間に単語・文法クイズ</span></span></li>
+        <li><span class="icon">✓</span><span><span class="en">Free & unlimited for active students</span><span class="ja">継続生徒は使い放題・無料</span></span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ORIGINAL CONTENT -->
+<section id="content" style="background:var(--cream);">
+  <div class="container">
+    <span class="section-tag center" style="display:block;">
+      <span class="en">My Original Content</span><span class="ja">オリジナルコンテンツ</span>
+    </span>
+    <h2 class="section-title center">
+      <span class="en">Free Tools I've Built for Japanese Learners</span>
+      <span class="ja">日本語学習者のために作った無料ツール</span>
+    </h2>
+    <p class="section-sub center">
+      <span class="en">More original apps and content are on the way — check back often.</span>
+      <span class="ja">オリジナルのアプリやコンテンツは今後も追加予定です。</span>
+    </p>
+    <div class="content-grid">
+      <div class="content-card">
+        <div class="content-icon">あ</div>
+        <h3><span class="en">Hiragana &amp; Katakana Practice</span><span class="ja">ひらがな・カタカナ練習</span></h3>
+        <p><span class="en">A free web app to master the two Japanese scripts through quick, repeatable practice — perfect for absolute beginners.</span><span class="ja">ひらがな・カタカナを繰り返し練習しながら覚えられる無料のWebアプリ。完全初心者に最適です。</span></p>
+        <a href="https://tako-ryo.github.io/hiragana-katakana/" target="_blank" class="btn btn-outline-navy"><span class="en">Try It Free</span><span class="ja">無料で試す</span></a>
+      </div>
+      <div class="content-card soon">
+        <div class="content-icon">＋</div>
+        <h3><span class="en">More Coming Soon</span><span class="ja">今後追加予定</span></h3>
+        <p><span class="en">New original tools and content are in the works.</span><span class="ja">新しいオリジナルツール・コンテンツを準備中です。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section id="strengths">
+  <div class="container">
+    <span class="section-tag center" style="display:block;">
+      <span class="en">Why Learn With Me</span><span class="ja">私について</span>
+    </span>
+    <h2 class="section-title center">
+      <span class="en">7 Reasons My Students Choose Me</span>
+      <span class="ja">選ばれる7つの理由</span>
+    </h2>
+    <p class="section-sub center">
+      <span class="en">A blend of certified teaching, real business experience, and tools you won't find anywhere else.</span>
+      <span class="ja">認定講師としての指導力、実務経験、そして他にはない学習ツール。</span>
+    </p>
+    <div class="strengths-grid">
+      <div class="strength-card">
+        <div class="strength-num">1</div>
+        <h3><span class="en">Advanced English Instruction</span><span class="ja">英語での直接指導</span></h3>
+        <p><span class="en">Advanced (C1) business-level English means even absolute beginners can learn worry-free — no confusion, no guessing.</span><span class="ja">ビジネス英語（C1・上級者）レベルを保有。日本語完全初心者でも安心して受講できます。</span></p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">2</div>
+        <h3><span class="en">Preply Certified Tutor</span><span class="ja">Preply認定講師</span></h3>
+        <p><span class="en">Verified "Certified Tutor" status on the world's largest language platform — clear, trustworthy, and intuitive teaching.</span><span class="ja">世界最大級のプラットフォームPreplyの認定プロ講師。信頼性の高い、直感的な指導が可能です。</span></p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">3</div>
+        <h3><span class="en">4 Years Global Sales Experience</span><span class="ja">4年のグローバル営業経験</span></h3>
+        <p><span class="en">Real-world business keigo, workplace customs, interview prep, and negotiation skills from a major manufacturer.</span><span class="ja">大手電機メーカーでの実務経験に基づく、リアルなビジネス敬語・商習慣・面接・交渉術の指導。</span></p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">4</div>
+        <h3><span class="en">Free Original App Access</span><span class="ja">オリジナルアプリを無料提供</span></h3>
+        <p><span class="en">Study anytime on your phone with my self-made app — normally paid, free & unlimited for my students.</span><span class="ja">通常は有料のオリジナルWebアプリ教材を、生徒限定で完全無料・使い放題。</span></p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">5</div>
+        <h3><span class="en">Output-Focused, Practical Lessons</span><span class="ja">アウトプット特化の実践プラン</span></h3>
+        <p><span class="en">Not just textbook drills — you'll think and speak for yourself through real practice.</span><span class="ja">教科書をなぞるだけでなく、問題を通して自分で考え、発言する力を養います。</span></p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">6</div>
+        <h3><span class="en">Mistakes Are Welcome!</span><span class="ja">失敗大歓迎！</span></h3>
+        <p><span class="en">I started learning English as an adult myself — I know how scary it feels. Zero judgment, ever.</span><span class="ja">私自身、大人になってから英語学習を始めたため初心者の気持ちを理解しています。否定は一切ありません。</span></p>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num">7</div>
+        <h3><span class="en">Real, Living Japanese</span><span class="ja">リアルな日本語を提供</span></h3>
+        <p><span class="en">Structured Genki-based lessons for beginners, plus native nuance, slang, and Gen Z Japanese you won't find in textbooks.</span><span class="ja">初心者には『げんき』ベースの体系的レッスン。加えてネイティブならではの微妙なニュアンスやGenZ言葉も紹介します。</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IS THIS YOU -->
+<section id="is-this-you" style="background:var(--cream);">
+  <div class="container" style="max-width:820px;">
+    <span class="section-tag center" style="display:block;">
+      <span class="en">Is This You?</span><span class="ja">こんな方におすすめ</span>
+    </span>
+    <h2 class="section-title center">
+      <span class="en">Who My Lessons Are For</span>
+      <span class="ja">こんな方におすすめです</span>
+    </h2>
+    <ul class="fit-list">
+      <li>
+        <span class="en">▶ I want to master Japanese step-by-step from the very beginning.</span>
+        <span class="ja">▶ 初めての日本語を、基礎から一歩ずつ着実にマスターしたい</span>
+      </li>
+      <li>
+        <span class="en">▶ I want to work confidently in a Japanese company (email, meetings, keigo).</span>
+        <span class="ja">▶ 日本企業で自信を持って働きたい（ビジネスメール、会議、敬語の克服）</span>
+      </li>
+      <li>
+        <span class="en">▶ I want to understand Japanese business culture, etiquette, and corporate mindset.</span>
+        <span class="ja">▶ 日本のビジネス文化、マナー、企業マインドを深く理解したい</span>
+      </li>
+      <li>
+        <span class="en">▶ I want to have natural, casual conversations with friends and colleagues.</span>
+        <span class="ja">▶ 友人や同僚と、自然でカジュアルな日常会話を楽しみたい</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- WHY CHOOSE ME COMPARISON -->
+<section id="why-me" style="background:var(--cream);">
+  <div class="container">
+    <span class="section-tag center" style="display:block;">
+      <span class="en">Compare</span><span class="ja">比較</span>
+    </span>
+    <h2 class="section-title center">
+      <span class="en">Why Choose Me?</span><span class="ja">なぜRyosukeが選ばれるのか</span>
+    </h2>
+    <p class="section-sub center">
+      <span class="en">See how my lessons differ from a typical school or freelance tutor.</span>
+      <span class="ja">一般的なスクールや個人講師との違いを比較しました。</span>
+    </p>
+    <div class="compare-wrap">
+      <table class="compare">
+        <colgroup>
+          <col style="width:18%">
+          <col style="width:27.33%">
+          <col style="width:27.33%">
+          <col style="width:27.34%">
+        </colgroup>
+        <thead>
+          <tr>
+            <th><span class="en">Category</span><span class="ja">比較項目</span></th>
+            <th><span class="en">Typical Japanese School</span><span class="ja">一般的な日本語学校</span></th>
+            <th><span class="en">Typical Online Tutor</span><span class="ja">一般的な個人講師</span></th>
+            <th class="highlight-head"><span class="en">Ryosuke's Lessons</span><span class="ja">Ryosukeのレッスン</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="en">Lesson Language</span><span class="ja">レッスン言語</span></td>
+            <td><span class="en">Japanese only (direct method)</span><span class="ja">日本語のみ（直接法）</span></td>
+            <td><span class="en">Depends on tutor (English often weak)</span><span class="ja">講師による（英語が拙い場合も）</span></td>
+            <td class="highlight-col"><span class="en">Smooth explanations in advanced (C1) English</span><span class="ja">C1（上級者）レベルの英語でスムーズに解説</span></td>
+          </tr>
+          <tr>
+            <td><span class="en">Business Training</span><span class="ja">ビジネス指導</span></td>
+            <td><span class="en">Textbook-style keigo only</span><span class="ja">教科書通りの堅い敬語のみ</span></td>
+            <td><span class="en">Often no real business experience</span><span class="ja">実務経験がない講師が多い</span></td>
+            <td class="highlight-col"><span class="en">4 yrs real global sales & negotiation experience</span><span class="ja">大手メーカー海外営業4年のリアルなビジネス経験</span></td>
+          </tr>
+          <tr>
+            <td><span class="en">Study Materials</span><span class="ja">自習用教材</span></td>
+            <td><span class="en">Printed textbooks only (heavy)</span><span class="ja">市販のテキストのみ（重い）</span></td>
+            <td><span class="en">PDFs or homework only</span><span class="ja">PDFの配布や宿題のみ</span></td>
+            <td class="highlight-col"><span class="en">Free original app — study anytime on your phone</span><span class="ja">【無料提供】スマホでいつでも遊べる自作アプリ教材</span></td>
+          </tr>
+          <tr>
+            <td><span class="en">Credibility</span><span class="ja">信頼性</span></td>
+            <td><span class="en">Institutional trust</span><span class="ja">組織としての信頼</span></td>
+            <td><span class="en">Credentials often unclear</span><span class="ja">資格・実績が不透明な場合も</span></td>
+            <td class="highlight-col"><span class="en">Preply Certified Tutor with proven track record</span><span class="ja">Preply認定プロ講師の確かな実績</span></td>
+          </tr>
+          <tr>
+            <td><span class="en">Learning Style</span><span class="ja">学習スタイル</span></td>
+            <td><span class="en">Input-focused, large classes</span><span class="ja">インプット中心・大人数</span></td>
+            <td><span class="en">Can become just free talk</span><span class="ja">フリートークのみになりがち</span></td>
+            <td class="highlight-col"><span class="en">Output-focused, practice-driven lessons</span><span class="ja">アウトプット重視の実践的なレッスン</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- EXAMPLE PLAN -->
+<section id="plan">
+  <div class="container" style="max-width:820px;">
+    <span class="section-tag center" style="display:block;">
+      <span class="en">Example Plan</span><span class="ja">レッスン例</span>
+    </span>
+    <h2 class="section-title center">
+      <span class="en">Your First 7 Lessons (Example)</span>
+      <span class="ja">7日間集中：ビギナー脱出プラン（例）</span>
+    </h2>
+    <p class="section-sub center">
+      <span class="en">Goal: Go from zero to introducing yourself comfortably.</span>
+      <span class="ja">目標：完全ゼロから、自信を持って自己紹介ができるようになる</span>
+    </p>
+    <div class="ba-box">
+      <div class="ba-col">
+        <div class="ba-tag before"><span class="en">Before</span><span class="ja">受講前</span></div>
+        <p><span class="en">Cannot read Japanese characters or speak a single word.</span><span class="ja">ひらがな・カタカナが読めず、一言も日本語が話せない状態。</span></p>
+      </div>
+      <div class="ba-col">
+        <div class="ba-tag after"><span class="en">After</span><span class="ja">受講後</span></div>
+        <p><span class="en">You can read Hiragana/Katakana, introduce yourself (name, job, hobbies, daily routine) using 5+ sentences, and comfortably order food or shop on your own!</span><span class="ja">ひらがな・カタカナが読めるようになり、5文以上の日本語で自己紹介（名前、仕事、趣味、一日の流れ）ができます。一人で飲食店の注文や買い物もできるようになります！</span></p>
+      </div>
+    </div>
+    <div class="plan-timeline">
+      <div class="plan-day"><span class="day-num">1</span><span>
+        <span class="en">Japanese characters (Hiragana)</span>
+        <span class="ja">文字の基礎（ひらがな・カタカナ）＆ あいさつ</span>
+      </span></div>
+      <div class="plan-day"><span class="day-num">2</span><span>
+        <span class="en">Japanese characters (Katakana)</span>
+        <span class="ja">数字、Genki Lesson 1 Grammar - レッスン1［新しい友達］</span>
+      </span></div>
+      <div class="plan-day"><span class="day-num">3</span><span>
+        <span class="en">Genki L1 Grammar — New Friends &amp; Self-Introduction</span>
+        <span class="ja">Genki Lesson 1 Practice - レッスン1［新しい友達］</span>
+      </span></div>
+      <div class="plan-day"><span class="day-num">4</span><span>
+        <span class="en">Genki L1 Practice — High-Output Speaking Work</span>
+        <span class="ja">Genki Lesson 2 Grammar - レッスン2［買い物］</span>
+      </span></div>
+      <div class="plan-day"><span class="day-num">5</span><span>
+        <span class="en">Genki L2 Grammar — Shopping &amp; Essential Survival Phrases</span>
+        <span class="ja">Genki Lesson 2 Practice - レッスン2［買い物］</span>
+      </span></div>
+      <div class="plan-day"><span class="day-num">6</span><span>
+        <span class="en">Genki L2 Practice — Interactive Roleplay (Ordering &amp; Buying)</span>
+        <span class="ja">Genki Lesson 3 Grammar - レッスン3［デートの計画］</span>
+      </span></div>
+      <div class="plan-day"><span class="day-num">7</span><span>
+        <span class="en">Genki L3 Grammar — Making a Date &amp; Expressing Routines</span>
+        <span class="ja">Genki Lesson 3 Practice - レッスン3［デートの計画］</span>
+      </span></div>
+    </div>
+    <p class="center" style="margin-top:24px; color:var(--gray-text); font-size:13.5px;">
+      <span class="en">* All lessons are fully customized to your goals, whether casual or professional.</span>
+      <span class="ja">※レッスンはあなたの目標に合わせてカスタマイズ可能です。ぜひ体験レッスンで教えてください。</span>
+    </p>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="container">
+    <span class="section-tag center" style="display:block;">
+      <span class="en">Pricing</span><span class="ja">料金</span>
+    </span>
+    <h2 class="section-title center">
+      <span class="en">Simple, Transparent Pricing</span><span class="ja">シンプルな料金プラン</span>
+    </h2>
+    <p class="section-sub center">
+      <span class="en">More plans (Business Japanese, Corporate Training, Subscriptions) are coming soon.</span>
+      <span class="ja">今後「ビジネス日本語特化プラン」「企業向け研修」「月額サブスク」なども追加予定です。</span>
+    </p>
+    <div class="pricing-grid">
+      <div class="price-card active">
+        <div class="price-badge"><span class="en">Available Now</span><span class="ja">受付中</span></div>
+        <h3><span class="en">Private Lesson</span><span class="ja">個人レッスン</span></h3>
+        <div class="price-amount">$25 <span><span class="en">/ lesson</span><span class="ja">／回</span></span></div>
+        <ul>
+          <li><span class="en">1-on-1 online lessons</span><span class="ja">マンツーマンオンラインレッスン</span></li>
+          <li><span class="en">Genki-based structured curriculum</span><span class="ja">『げんき』ベースの体系的カリキュラム</span></li>
+          <li><span class="en">Free access to my original app</span><span class="ja">オリジナルアプリ無料アクセス</span></li>
+          <li><span class="en">Flexible scheduling</span><span class="ja">柔軟なスケジュール調整</span></li>
+        </ul>
+        <a href="https://buy.stripe.com/00weV64rU0TO62g8BB6kg03" target="_blank" class="btn btn-primary"><span class="en">Purchase Lessons</span><span class="ja">レッスンを購入する</span></a>
+        <p class="price-note"><span class="en">Billed in packages of 4 lessons. Your plan automatically renews every 4 lessons unless canceled.</span><span class="ja">4回分ごとのお支払いです。キャンセルされない限り、4回ごとに自動的に更新されます。</span></p>
+        <a href="#contact" class="btn btn-outline-navy" style="margin-top:12px;"><span class="en">Or Book a Free Trial First</span><span class="ja">まずは無料体験を予約する</span></a>
+      </div>
+      <div class="price-card soon">
+        <div class="soon-tag"><span class="en">Coming Soon</span><span class="ja">近日公開</span></div>
+        <h3><span class="en">Business Japanese Plan</span><span class="ja">ビジネス日本語特化プラン</span></h3>
+        <div class="price-amount">— </div>
+        <ul>
+          <li><span class="en">Email & keigo etiquette</span><span class="ja">ビジネスメール・敬語</span></li>
+          <li><span class="en">Interview & negotiation practice</span><span class="ja">面接・交渉ロールプレイ</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-outline-navy"><span class="en">Get Notified</span><span class="ja">お知らせを受け取る</span></a>
+      </div>
+      <div class="price-card soon">
+        <div class="soon-tag"><span class="en">Coming Soon</span><span class="ja">近日公開</span></div>
+        <h3><span class="en">Corporate Training (B2B)</span><span class="ja">企業向け研修</span></h3>
+        <div class="price-amount">— </div>
+        <ul>
+          <li><span class="en">Custom training for teams</span><span class="ja">チーム向けカスタム研修</span></li>
+          <li><span class="en">For companies entering Japan</span><span class="ja">日本進出企業向け</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-outline-navy"><span class="en">Inquire</span><span class="ja">問い合わせる</span></a>
+      </div>
+      <div class="price-card soon">
+        <div class="soon-tag"><span class="en">Coming Soon</span><span class="ja">近日公開</span></div>
+        <h3><span class="en">Monthly Subscription</span><span class="ja">月額サブスクリプション</span></h3>
+        <div class="price-amount">— </div>
+        <ul>
+          <li><span class="en">Unlimited app + async support</span><span class="ja">アプリ使い放題＋非同期サポート</span></li>
+        </ul>
+        <a href="#contact" class="btn btn-outline-navy"><span class="en">Get Notified</span><span class="ja">お知らせを受け取る</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <span class="section-tag center" style="display:block;">
+      <span class="en">Testimonials</span><span class="ja">生徒の声</span>
+    </span>
+    <h2 class="section-title center">
+      <span class="en">What My Students Say</span><span class="ja">生徒の声</span>
+    </h2>
+    <p class="section-sub center">
+      <span class="en">Real reviews from real students on Preply.</span>
+      <span class="ja">Preplyに実際に寄せられた生徒の声です。</span>
+    </p>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote">
+          <span class="en">"Ryosuke is an outstanding Japanese tutor and one of the best teachers I've worked with. He is extremely attentive during lessons and always makes sure I understand the material before moving on. His English is excellent — better than any other Japanese teacher I've encountered on this platform — which makes explanations clear and easy to follow. His lesson slides are informative, well-organized, and great for studying between lessons. I highly recommend Ryosuke to anyone looking for a knowledgeable, professional, and effective Japanese teacher."</span>
+          <span class="ja">「Ryosukeは今まで出会った中でも最高の日本語講師の一人です。レッスン中はとても丁寧で、理解できているか常に確認してから次に進んでくれます。英語も非常に上手で、このプラットフォームで出会った他のどの日本語講師よりも説明が分かりやすいです。スライドもよく整理されていて、復習にも役立ちます。知識豊富でプロフェッショナルな先生を探している方に心からおすすめします。」</span>
+        </p>
+        <div class="testi-name">N.</div>
+        <div class="testi-loc"><span class="en">Verified Preply Student</span><span class="ja">Preply認証済み生徒</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote">
+          <span class="en">"Ryosuke is an incredible Japanese teacher who makes learning feel natural and fun. What stood out most was how he explained pronunciation — instead of just telling me I was wrong, he showed me where to place my tongue and compared it to English so I actually understood. He also brings real cultural context into the lessons — work culture, keigo, even hot spring etiquette. If you're serious about learning Japanese, I highly recommend Ryosuke."</span>
+          <span class="ja">「Ryosukeは学習を自然で楽しいものにしてくれる素晴らしい先生です。特に印象的だったのは発音の教え方で、ただ『違う』と言うのではなく、舌の位置を具体的に示しながら英語と比較して説明してくれるので、本当に理解できました。仕事の文化や敬語、温泉のマナーなど、実際の文化的な背景も教えてくれます。本気で日本語を学びたい方には心からおすすめです。」</span>
+        </p>
+        <div class="testi-name">B.</div>
+        <div class="testi-loc"><span class="en">Verified Preply Student</span><span class="ja">Preply認証済み生徒</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote">
+          <span class="en">"Helpful for practicing speaking in Japanese. Ryosuke is fun, patient, kind, and excellent at both English and Japanese. A wonderful learning experience."</span>
+          <span class="ja">「日本語のスピーキング練習にとても役立ちます。Ryosukeは楽しくて、忍耐強く、優しく、英語も日本語もとても上手です。素晴らしい学習体験でした。」</span>
+        </p>
+        <div class="testi-name">M.</div>
+        <div class="testi-loc"><span class="en">Verified Preply Student</span><span class="ja">Preply認証済み生徒</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote">
+          <span class="en">"Ryosuke is a very patient and good tutor. He matches his speaking speed to fit you and patiently helps you practice Japanese! 100% recommended."</span>
+          <span class="ja">「Ryosukeはとても忍耐強く、良い先生です。話すスピードを自分に合わせてくれて、根気強く日本語の練習を手伝ってくれます！100%おすすめです。」</span>
+        </p>
+        <div class="testi-name">Q.</div>
+        <div class="testi-loc"><span class="en">Verified Preply Student</span><span class="ja">Preply認証済み生徒</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote">
+          <span class="en">"He is a really great tutor and makes learning Japanese so fun! Our lessons are very conversational, so it's not scary or intimidating to learn — it's like learning from a friend. Book his class ASAP!"</span>
+          <span class="ja">「本当に素晴らしい先生で、日本語学習をとても楽しくしてくれます！レッスンはとても会話中心なので、怖さや緊張感がなく、まるで友達から教わっているようです。今すぐレッスンを予約すべきです！」</span>
+        </p>
+        <div class="testi-name">S.</div>
+        <div class="testi-loc"><span class="en">Verified Preply Student</span><span class="ja">Preply認証済み生徒</span></div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote">
+          <span class="en">"Ryosuke-San is a really great teacher and makes learning Japanese really fun and not intimidating at all! As a beginner, I really appreciate how patient and encouraging he is, and his lessons are always easy to follow."</span>
+          <span class="ja">「Ryosuke先生は本当に素晴らしい先生で、日本語学習をとても楽しく、全く怖くないものにしてくれます！初心者の私にとって、忍耐強く励ましてくれる姿勢がとてもありがたく、レッスンはいつも分かりやすいです。」</span>
+        </p>
+        <div class="testi-name">N.</div>
+        <div class="testi-loc"><span class="en">Verified Preply Student</span><span class="ja">Preply認証済み生徒</span></div>
+      </div>
+    </div>
+    <p class="center" style="margin-top:36px;">
+      <a href="https://preply.com/en/tutor/7762237" target="_blank" class="btn btn-outline-navy">
+        <span class="en">Read More Reviews on Preply</span><span class="ja">Preplyでさらにレビューを見る</span>
+      </a>
+    </p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="container" style="max-width:820px;">
+    <span class="section-tag center" style="display:block;">FAQ</span>
+    <h2 class="section-title center">
+      <span class="en">Frequently Asked Questions</span><span class="ja">よくある質問</span>
+    </h2>
+
+    <details class="faq-item" open>
+      <summary><span class="en">I am an absolute beginner. Can I really take your lessons?</span><span class="ja">完全な初心者ですが、本当にレッスンを受けても大丈夫ですか？</span></summary>
+      <p><span class="en">Absolutely! Over 80% of my students started from zero. I'm highly experienced with beginners, and my advanced (C1) English lets me explain complex grammar clearly. We'll use the beginner-friendly "Genki" textbook at your own pace.</span>
+      <span class="ja">もちろんです！生徒の8割以上が完全ゼロからのスタートです。初心者指導に慣れており、英語での直接指導ができるため、複雑な文法もクリアに解説します。『げんき』を使い、ご自身のペースで学べます。</span></p>
+    </details>
+
+    <details class="faq-item">
+      <summary><span class="en">What makes your lessons different from other tutors or schools?</span><span class="ja">他の講師やスクールとの違いは何ですか？</span></summary>
+      <p><span class="en">Four things: (1) Real business experience — 4 years in global sales. (2) Free app access — my self-developed learning app, free for students. (3) High-output style — no boring lectures. (4) Certified quality — verified Preply tutor.</span>
+      <span class="ja">大きく4つあります。まず、大手企業で4年間培った本物のビジネス経験。次に、生徒限定で無料開放しているオリジナル学習アプリ。そして、教科書を読むだけで終わらせない、たくさん話してもらうレッスンスタイル。最後に、Preply認定プロ講師としての実績です。</span></p>
+    </details>
+
+    <details class="faq-item">
+      <summary><span class="en">How do I use your original web-apps? Do I need to pay extra?</span><span class="ja">オリジナルWebアプリはどうやって使うのですか？追加料金は必要ですか？</span></summary>
+      <p><span class="en">They're 100% free for all my regular students! Normally sold separately, I provide them as a complimentary self-study tool — open them on any smartphone browser anytime between lessons.</span>
+      <span class="ja">継続して受講してくださっている生徒さんには、完全無料でお使いいただけます。本来は別売りしているアプリなのですが、レッスンの合間の自習用としてプレゼントしています。スマホのブラウザからいつでも開けるので、ちょっとした空き時間にも気軽に復習できますよ。</span></p>
+    </details>
+
+    <details class="faq-item">
+      <summary><span class="en">Can you help me prepare for job interviews or business presentations?</span><span class="ja">面接対策やプレゼンの準備は手伝ってもらえますか？</span></summary>
+      <p><span class="en">Yes, this is my specialty. Having negotiated with global clients in both Japanese and English, I teach polite honorifics (keigo), email etiquette, and interview techniques with realistic role-play simulations.</span>
+      <span class="ja">はい、そこは得意分野です。実際に日本語と英語の両方で海外のお客様と交渉してきた経験があるので、正しい敬語の使い方やビジネスメールの書き方、面接での話し方まで具体的にお伝えできます。本番を想定したロールプレイも一緒にやっていきましょう。</span></p>
+    </details>
+
+    <details class="faq-item">
+      <summary><span class="en">I'm afraid of making mistakes. Is your classroom strict?</span><span class="ja">間違えるのが怖いです。授業は厳しいですか？</span></summary>
+      <p><span class="en">Not at all! My policy is "Mistakes are welcome!" I didn't start learning English seriously until adulthood, so I know how scary it feels. Zero judgment — let's laugh and learn together!</span>
+      <span class="ja">全然厳しくないです！私のモットーは「失敗大歓迎」。実は私自身、英語をちゃんと勉強し始めたのは大人になってからで、外国語を話すときのドキドキする気持ちはよく分かります。間違えても大丈夫、笑いながら一緒に楽しく学んでいきましょう。</span></p>
+    </details>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="en">Ready to Start? Book Your Free Trial</span>
+      <span class="ja">無料体験レッスンを始めましょう</span>
+    </h2>
+    <p class="lead">
+      <span class="en">30 minutes, no pressure — let's see if we're a good fit and find the right plan for your goals.</span>
+      <span class="ja">30分の気軽なカウンセリング。目標に合ったプランを一緒に見つけましょう。</span>
+    </p>
+    <div class="contact-actions">
+      <a href="https://calendly.com/all19-ryo/30min" target="_blank" class="btn btn-primary">
+        <span class="en">Book Free Trial (Calendly)</span><span class="ja">無料体験を予約（Calendly）</span>
+      </a>
+      <a href="https://preply.com/en/tutor/7762237" target="_blank" class="btn btn-outline">
+        <span class="en">View My Preply Profile</span><span class="ja">Preplyプロフィールを見る</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="logo" style="color:#fff;">Japanese <span style="color:var(--coral);">with Ryosuke</span></div>
+    <div class="footer-social">
+      <!-- Replace # with your real Instagram link -->
+      <a href="#" target="_blank">Instagram</a>
+      <a href="https://preply.com/en/tutor/7762237" target="_blank">Preply</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="en">© 2026 Ryosuke — Preply Certified Japanese Tutor. All rights reserved.</span>
+    <span class="ja">© 2026 Ryosuke — Preply認定日本語講師。All rights reserved.</span>
+  </div>
+</footer>
+
+<script>
+  // Mobile nav toggle
+  document.getElementById('burgerBtn').addEventListener('click', function(){
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  // Language toggle (EN default, JA optional)
+  var htmlRoot = document.getElementById('html-root');
+  var langBtn = document.getElementById('langToggle');
+
+  function setLang(lang){
+    if(lang === 'ja'){
+      document.body.classList.add('lang-ja');
+      htmlRoot.setAttribute('lang','ja');
+      langBtn.querySelector('.opt-ja').classList.add('active');
+      langBtn.querySelector('.opt-en').classList.remove('active');
+    } else {
+      document.body.classList.remove('lang-ja');
+      htmlRoot.setAttribute('lang','en');
+      langBtn.querySelector('.opt-en').classList.add('active');
+      langBtn.querySelector('.opt-ja').classList.remove('active');
+    }
+    try{ localStorage.setItem('site-lang', lang); }catch(e){}
+  }
+
+  langBtn.addEventListener('click', function(){
+    var current = document.body.classList.contains('lang-ja') ? 'ja' : 'en';
+    setLang(current === 'ja' ? 'en' : 'ja');
+  });
+
+  try{
+    var saved = localStorage.getItem('site-lang');
+    if(saved){ setLang(saved); }
+  }catch(e){}
+
+  // Close mobile menu when a link is clicked
+  document.querySelectorAll('.nav-links a').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.getElementById('navLinks').classList.remove('open');
+    });
+  });
+</script>
+
+</body>
+</html>
